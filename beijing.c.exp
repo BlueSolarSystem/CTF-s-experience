@@ -1,0 +1,209 @@
+#include<stdio.h>
+char  con[]={0x52,0x13,0x2d,0x3e,0xd5,0x2d,0xe7,0x2d,0xe8,0x40,0x2c,0x3e,0x08,0x6f,0x14,0x40,0xac,0x40,0x2c,0x3e,0x91};
+//char con[]="R->?-?-?@,o@?@,>?";
+char byte_804A020 = 'a'; // weak
+char byte_804A021 = 'L'; // weak
+char byte_804A022 = 'g'; // weak
+char byte_804A023 = 'Y'; // weak
+char byte_804A024 = 'i'; // weak
+char byte_804A025 = ')'; // weak
+char byte_804A026 = 'n'; // weak
+char byte_804A027 = 'B'; // weak
+char byte_804A028 = 'b'; // weak
+char byte_804A029 = '\r'; // weak
+char byte_804A02A = 'e'; // weak
+char byte_804A02B = 'q'; // weak
+char byte_804A02C = 'f'; // weak
+char byte_804A02D = '4'; // weak
+char byte_804A02E = 'j'; // weak
+char byte_804A02F = 0x0C6; // weak
+char byte_804A030 = 'm'; // weak
+char byte_804A031 = '\x8A'; // weak
+char byte_804A032 = 'l'; // weak
+char byte_804A033 = '\x7F'; // weak
+char byte_804A034 = '{'; // weak
+char byte_804A035 = '\xAE'; // weak
+char byte_804A036 = 'z'; // weak
+char byte_804A037 = '\x92'; // weak
+char byte_804A038 = '}'; // weak
+char byte_804A039 = 0xEC; // weak
+char byte_804A03A = '_'; // weak
+char byte_804A03B = 'W'; // weak
+int dword_804A03C = 6; // weak
+int dword_804A044 = 9; // weak
+int dword_804A050 = 1; // weak
+int dword_804A058 = 10; // weak
+int dword_804A064 = 8; // weak
+int dword_804A070 = 11; // weak
+int dword_804A078 = 2; // weak
+int dword_804A080 = 3; // weak
+int dword_804A088 = 1; // weak
+int dword_804A090 = 13; // weak
+int dword_804A098 = 4; // weak
+int dword_804A0A0 = 5; // weak
+int dword_804A0A8 = 2; // weak
+int dword_804A0B0 = 7; // weak
+int dword_804A0B8 = 2; // weak
+int dword_804A0C0 = 3; // weak
+int dword_804A0C8 = 1; // weak
+int dword_804A0D0 = 12; // weak
+
+
+//int dword_804A0E0; // weak
+//int dword_804A0E4; // weak
+//int dword_804A0E8; // weak
+// extern _UNKNOWN __gmon_start__; weak
+
+int count=0;
+
+
+//----- (08048460) --------------------------------------------------------
+int __cdecl sub_8048460(int a1)
+{
+  char v2; // [esp+Fh] [ebp-1h]
+  
+  switch ( a1 )
+  {
+    case 0:
+      v2 = byte_804A021 ^ con[count];
+      break;
+    case 1:
+      v2 = byte_804A023 ^ con[count];
+      break;
+    case 2:
+      v2 = byte_804A025 ^ con[count];
+      break;
+    case 3:
+      v2 = byte_804A027 ^ con[count];
+      break;
+    case 4:
+      v2 = byte_804A029 ^ con[count];
+      break;
+    case 5:
+      v2 = byte_804A02B ^ con[count];
+      break;
+    case 6:
+      v2 = byte_804A02D ^ con[count];
+      break;
+    case 7:
+      v2 = byte_804A02F ^ con[count];
+      break;
+    case 8:
+      v2 = byte_804A031 ^ con[count];
+      break;
+    case 9:
+      v2 = byte_804A033 ^ con[count];
+      break;
+    case 10:
+      v2 = byte_804A035 ^ con[count];
+      break;
+    case 11:
+      v2 = byte_804A037 ^ con[count];
+      break;
+    case 12:
+      v2 = byte_804A039 ^ con[count];
+      break;
+    case 13:
+      v2 = byte_804A03B ^ con[count];
+      break;
+    default:
+      v2 = 0;
+      break;
+  }
+  count++;
+  return v2;
+}
+
+
+//----- (08048610) --------------------------------------------------------
+int  main()
+{
+  char v0; // al
+  char v1; // al
+  char v2; // al
+  char v3; // al
+  char v4; // al
+  char v5; // al
+  char v6; // al
+  char v7; // al
+  char v8; // al
+  char v9; // al
+  char v10; // al
+  char v11; // al
+  char v12; // al
+  char v13; // al
+  char v14; // al
+  char v15; // al
+  char v16; // al
+  char v17; // al
+  char v18; // al
+  char v19; // al
+  char v20; // al
+  
+  v0 = sub_8048460(dword_804A03C);
+  printf("%c", v0);
+  fflush(stdout);
+  v1 = sub_8048460(dword_804A044);
+  printf("%c", v1);
+  fflush(stdout);
+  v2 = sub_8048460(0);  // 1
+  printf("%c", v2);
+  fflush(stdout);
+  v3 = sub_8048460(dword_804A050);
+  printf("%c", v3);
+  fflush(stdout);
+  v4 = sub_8048460(dword_804A058); //5
+  printf("%c", v4);
+  fflush(stdout);
+  v5 = sub_8048460(0);// 2
+  printf("%c", v5);
+  fflush(stdout);
+  v6 = sub_8048460(dword_804A064);
+  printf("%c", v6);
+  fflush(stdout);
+  v7 = sub_8048460(0);// 3
+  printf("%c", v7);
+  fflush(stdout);
+  v8 = sub_8048460(dword_804A070);
+  printf("%c", v8);
+  fflush(stdout);
+  v9 = sub_8048460(dword_804A078);
+  printf("%c", v9);
+  fflush(stdout);
+  v10 = sub_8048460(dword_804A080);
+  printf("%c", v10);
+  fflush(stdout);
+  v11 = sub_8048460(dword_804A088);
+  printf("%c", v11);
+  fflush(stdout);
+  v12 = sub_8048460(dword_804A090);
+  printf("%c", v12);
+  fflush(stdout);
+  v13 = sub_8048460(dword_804A098);
+  printf("%c", v13);
+  fflush(stdout);
+  v14 = sub_8048460(dword_804A0A0);
+  printf("%c", v14);
+  fflush(stdout);
+  v15 = sub_8048460(dword_804A0A8);
+  printf("%c", v15);
+  fflush(stdout);
+  v16 = sub_8048460(dword_804A0B0);
+  printf("%c", v16);
+  fflush(stdout);
+  v17 = sub_8048460(dword_804A0B8);
+  printf("%c", v17);
+  fflush(stdout);
+  v18 = sub_8048460(dword_804A0C0);
+  printf("%c", v18);
+  fflush(stdout);
+  v19 = sub_8048460(dword_804A0C8);
+  printf("%c", v19);
+  fflush(stdout);
+  v20 = sub_8048460(dword_804A0D0);
+  printf("%c", v20);
+  fflush(stdout);
+  printf("\n");
+  return 0;
+}
+
